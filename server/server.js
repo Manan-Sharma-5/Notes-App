@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.listen(8000, console.log('listening on port 8000'));
 
-const mongoURI = 'mongodb+srv://mashmanan:258dxU31Jkxg62vw@cluster0.hgatok1.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODBURI;
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
