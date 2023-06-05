@@ -21,7 +21,7 @@ const Register  = (props) => {
 
   function register(e) {
     e.preventDefault();
-    fetch("http://localhost:8000/register", {
+    fetch("https://api-call-notes.onrender.com/register", {
       method: "POST",  
     headers: {
         "Content-Type": "application/json"

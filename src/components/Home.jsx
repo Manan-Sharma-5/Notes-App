@@ -17,7 +17,7 @@ const Home = () => {
   
     function fetchNotes() {
       axios
-        .get('http://localhost:8000/notes', {
+        .get('https://api-call-notes.onrender.com/notes', {
           headers: {
             Authorization: `Basic ${credentials.username}:${credentials.password}`, 
           },
@@ -35,7 +35,7 @@ const Home = () => {
         alert('Please enter a title and content for your note.');
         return;
       }
-      axios.post('http://localhost:8000/notes', note, {
+      axios.post('https://api-call-notes.onrender.com/notes', note, {
         headers: {
           Authorization: `Basic ${credentials.username}:${credentials.password}`,
         },
@@ -50,7 +50,7 @@ const Home = () => {
   
     function deleteNote(id) {
       const noteId = notes[id]._id; // Use the MongoDB ID instead of array index
-      axios.delete(`http://localhost:8000/notes/${noteId}`)
+      axios.delete(`https://api-call-notes.onrender.com//notes/${noteId}`)
         .then(() => {
           fetchNotes(); // Fetch updated notes array
           setExpandedID(null);
