@@ -50,7 +50,7 @@ const Home = () => {
   
     function deleteNote(id) {
       const noteId = notes[id]._id; // Use the MongoDB ID instead of array index
-      axios.delete(`https://api-call-notes.onrender.com//notes/${noteId}`)
+      axios.delete(`https://api-call-notes.onrender.com/notes/${noteId}`)
         .then(() => {
           fetchNotes(); // Fetch updated notes array
           setExpandedID(null);
