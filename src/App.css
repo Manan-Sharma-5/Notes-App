@@ -1,38 +1,214 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f5f5f5;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  background-color: rgb(27, 204, 235);
+  padding: 10px;
+  box-shadow: rgb(23, 163, 163) 3px 3px 7px;
+}
+
+.theme{
+  padding: 20px;
+  border-radius: 40px;
+  background-color: yellow;
+  border: none;
+}
+
+.greet{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.content{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  text-align: center;
+  box-shadow: rgb(116, 154, 216) 3px 5px 15px;
+  border-radius: 5px;
+  margin: 3% 30%;
+  padding: 10px;
+}
+
+.input-title{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 36px;
+  border-radius: 5px 5px 0 0;
+  outline: none;
+}
+
+.content textarea{
+  text-align: left;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.content button{
+  padding: 3px;
+  margin-left: 90%;
+  background-color: aqua;
+  border-radius: 1000px;
+  border: none;
+  box-shadow: rgb(22, 134, 134) 3px 3px 5px;
+  cursor: pointer;
+}
+
+.content button:active{
+  background-color: white;
+  color: rgb(22, 134, 134);
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.stored-notes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  box-shadow: rgb(116, 154, 216) 3px 5px 15px;
+  border-radius: 50px;
+}
+
+.all-notes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.note{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.stored-notes h1{
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.stored-notes p{
+  text-align: left;
+}
+
+.delete{
+  position: relative;
+  top: 34px;
+  left: 166px;
+  padding: 4px;
+  background-color: #fff;
+  margin-top: 4%;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  gap: 10px;
+}
+
+.text-login{
+  font-size: 32px;
+  border: none;
+  outline: none;
+  box-shadow: black 3px 3px 5px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10%;
+}
+
+.login{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.label-login{
+  font-size: 32px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-button{
+  padding: 5px;
+  width: 150px;
+  margin-top: 30%;
+  background-color: aqua;
+  border: none;
+  box-shadow: rgb(22, 134, 134) 3px 3px 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logins{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  min-height: 100vh;
+  background-image: url(./res/bg.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.logout{
+  position: relative;
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+  background-color: aqua;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgb(22, 134, 134) 3px 3px 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.logout:hover{
+  background-color: white;
+  color: rgb(22, 134, 134);
 }
