@@ -15,7 +15,9 @@ function App() {
       <CredentialsContext.Provider value={credentialState}>
         <Router>
           <Routes>
-          <Route path="/" element={isAuthenticated ? <Home />: <Login 
+          <Route path="/" element={isAuthenticated ? <Home 
+            setIsAuthenticated={setIsAuthenticated}
+          />: <Login 
             setIsAuthenticated={setIsAuthenticated}
           />} />
             <Route path="/login" element={<Login />} />

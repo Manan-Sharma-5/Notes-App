@@ -47,11 +47,11 @@ const Login  = (props) => {
       {isError && <div>User Already Exists</div>}
       <form className="login-form">
         <div className="label-login">
-          <label>Username:</label>
+          <label><u>Username:</u></label>
           <input type="text" name="username" className="text-login" onChange={(e) => setUsername(e.target.value)}/>
         </div>
         <div className="label-login">
-          <label>Password:</label>
+          <label><u>Password:</u></label>
           <input type="password" name="password" className="text-login" onChange={(e) => setPassword(e.target.value)}/>
         </div>
         <div>

@@ -126,3 +126,17 @@ app.post('/login', async (req, res) => {
     res.json({ message: 'Login successful' });
   }
 });
+
+app.patch('/notes/:id', (req, res) => {
+  const id = req.params.id;
+  const { title, content } = req.body;
+
+  Note.findByIdAndUpdate(id, { title, content })
+    .then(() => {
+      res.sendStatus(204);
+    })
+    .catch((err) => {
+      console.error('Error updating note:', err);
+      res.sendStatus(500);
+    });
+});

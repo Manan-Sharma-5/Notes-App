@@ -140,7 +140,6 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 3%;
-  gap: 10px;
 }
 
 .text-login{
@@ -149,6 +148,7 @@ body{
   outline: none;
   box-shadow: black 3px 3px 5px;
   text-align: center;
+  width: 100%;
   padding: 10px;
   margin-top: 10%;
 }
@@ -158,30 +158,37 @@ body{
 }
 
 .label-login{
+  padding-top: 10%;
+  padding-bottom: 10%;
   font-size: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
 }
 
 .login-button{
-  padding: 5px;
-  width: 150px;
-  margin-top: 30%;
+  padding: 15px;
+  margin-bottom: 10%;
+  width: 250px;
+  margin-top: 10%;
   background-color: aqua;
   border: none;
   box-shadow: rgb(22, 134, 134) 3px 3px 5px;
+  border-radius: 1000px;
   cursor: pointer;
 }
 
 .login{
-  margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 4.3%;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .logins{
@@ -189,7 +196,7 @@ body{
   width: 100%;
   top: 0;
   min-height: 100vh;
-  background-image: url(./res/bg.jpeg);
+  background-image: url(res/400w-LrNk7fAXxw8.webp);
   background-size: cover;
   background-position: center;
 }
@@ -211,4 +218,37 @@ body{
 .logout:hover{
   background-color: white;
   color: rgb(22, 134, 134);
+}
+
+.expanded-note-form{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  text-align: center;
+  box-shadow: rgb(116, 154, 216) 3px 5px 15px;
+  border-radius: 5px;
+  margin: 3% 30%;
+  padding: 10px;
+}
+
+.expanded-note-form textarea{
+  text-align: left;
+  width: 100%;
+  height: 200px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.expanded-note-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  border: none;
+  outline: none;
 }

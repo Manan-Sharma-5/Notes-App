@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './Header';
 import InputArea from './InputArea';
+import ExpandedNotes from './ExpandedNotes';
 import { useContext } from 'react';
 import {CredentialsContext} from "../App";
 import Notes from './Notes';
 
-const Home = () => {
+const Home = (props) => {
     const [notes, setNotes] = useState([]);
     const [expandedID, setExpandedID] = useState(null);
     const [credentials] = useContext(CredentialsContext);
@@ -47,6 +48,23 @@ const Home = () => {
           console.error('Error creating note:', error);
         });
     }
+
+    function updateNote (id, name, value) {
+      const noteId = notes[id]._id; // Use the MongoDB ID instead of array index
+      axios.patch(`http://api-call-notes.onrender.com/notes/${noteId}`, {
+        [name]: value,
+      }, {
+        headers: {
+          Authorization: `Basic ${credentials.username}:${credentials.password}`,
+        },
+      })
+        .then(() => {
+          fetchNotes(); // Fetch updated notes array
+        })
+        .catch((error) => {
+          console.error('Error updating note:', error);
+        });
+      }
   
     function deleteNote(id) {
       const noteId = notes[id]._id; // Use the MongoDB ID instead of array index
@@ -67,7 +85,9 @@ const Home = () => {
     if (expandedID === null) {
       return (
         <div className="App">
-          <Header />
+          <Header 
+            setIsAuthenticated={props.setIsAuthenticated}
+          />
           <InputArea onAdd={addingNote}/>
           <h1 className="heading">Stored Notes</h1>
           <div className="all-notes">
@@ -88,15 +108,20 @@ const Home = () => {
     } else {
       return (
         <div className="Expanded-App">
-          <Header />
-          <Notes
+          <Header 
+            setIsAuthenticated={props.setIsAuthenticated}
+          />
+          <ExpandedNotes
             title={notes[expandedID].title}
             content={notes[expandedID].content}
             onExpand={() => setExpandedID(null)}
+            onUpdate={updateNote}
           />
+
         </div>
       );
     }
+  
 }
 
 export default Home;
