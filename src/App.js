@@ -20,7 +20,9 @@ function App() {
           />: <Login 
             setIsAuthenticated={setIsAuthenticated}
           />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login 
+            setIsAuthenticated={setIsAuthenticated}
+            />} />
             <Route path="/register" element={<Register 
             setIsAuthenticated={setIsAuthenticated}
             />} />
