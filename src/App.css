@@ -10,6 +10,7 @@ body{
 
 .header{
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   color: aliceblue;
@@ -248,7 +249,86 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px;
+  padding: 5% 0;
+  text-align: center;
   border: none;
   outline: none;
+}
+
+@media (min-width: 1px ) and (max-width: 680px){
+  .content{
+    margin: 3% 10%;
+  }
+
+  .header{
+    width: 100%;
+  }
+
+  .stored-notes{
+    width: 300px;
+    height: 200px;
+  }
+
+  .all-notes{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .login{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .expanded-note-form{
+    margin: 3% 10%;
+  }
+
+  .input-title{
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content textarea{
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content button{
+    width: 40px;
+    padding: 5px;
+    margin-left: 84%;
+  }
+
+}
+
+@media (min-width: 680px) and (max-width: 1320px){
+
+  .content{
+    margin: 3% 10%;
+  }
+
+  .header{
+    width: 100%;
+  }
+
+  .stored-notes{
+    width: 300px;
+    height: 200px;
+  }
+
+  .all-notes{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .login{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .expanded-note-form{
+    margin: 3% 10%;
+  }
 }

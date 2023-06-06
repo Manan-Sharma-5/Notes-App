@@ -1,4 +1,5 @@
 import React from "react";
+import ParagraphWithCharacterLimit from './ParagraphReducer';
 
 function Note(props) {
 
@@ -15,7 +16,7 @@ function expandingNote() {
         <button className="delete" onClick={handleClick}>X</button>
     <div className="stored-notes" onClick={expandingNote}>
       <h1>{props.title}</h1>
-      <p>{props.content}</p>
+      <ParagraphWithCharacterLimit text={props.content} characterLimit={32} />
       </div>
     </div>
   );

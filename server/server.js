@@ -133,10 +133,10 @@ app.patch('/notes/:id', (req, res) => {
 
   Note.findByIdAndUpdate(id, { title, content })
     .then(() => {
-      res.sendStatus(204);
+      res.status(204).json({ message: 'Note updated' });
     })
     .catch((err) => {
       console.error('Error updating note:', err);
-      res.sendStatus(500);
+      res.status(500).json({ error: 'Failed to update note' });
     });
 });

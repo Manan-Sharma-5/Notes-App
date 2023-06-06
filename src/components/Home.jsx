@@ -49,10 +49,11 @@ const Home = (props) => {
         });
     }
 
-    function updateNote (expandedID, name, value) {
+    function updateNote (expandedID, title, content) {
       const noteId = notes[expandedID]._id; // Use the MongoDB ID instead of array index
       axios.patch(`https://api-call-notes.onrender.com/notes/${noteId}`, {
-        [name]: value,
+        title,
+        content,
       }, {
         headers: {
           Authorization: `Basic ${credentials.username}:${credentials.password}`,
