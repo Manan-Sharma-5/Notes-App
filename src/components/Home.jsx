@@ -49,9 +49,9 @@ const Home = (props) => {
         });
     }
 
-    function updateNote (id, name, value) {
-      const noteId = notes[id]._id; // Use the MongoDB ID instead of array index
-      axios.patch(`http://api-call-notes.onrender.com/notes/${noteId}`, {
+    function updateNote (expandedID, name, value) {
+      const noteId = notes[expandedID]._id; // Use the MongoDB ID instead of array index
+      axios.patch(`http://localhost:8000/notes/${noteId}`, {
         [name]: value,
       }, {
         headers: {
@@ -112,6 +112,7 @@ const Home = (props) => {
             setIsAuthenticated={props.setIsAuthenticated}
           />
           <ExpandedNotes
+            expandingIndex={expandedID}
             title={notes[expandedID].title}
             content={notes[expandedID].content}
             onExpand={() => setExpandedID(null)}
