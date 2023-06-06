@@ -51,7 +51,7 @@ const Home = (props) => {
 
     function updateNote (expandedID, name, value) {
       const noteId = notes[expandedID]._id; // Use the MongoDB ID instead of array index
-      axios.patch(`http://localhost:8000/notes/${noteId}`, {
+      axios.patch(`https://api-call-notes.onrender.com/notes/${noteId}`, {
         [name]: value,
       }, {
         headers: {
