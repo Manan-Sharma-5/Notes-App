@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {CredentialsContext} from "../App";
 import { useContext } from "react";
 
@@ -28,12 +28,12 @@ const Register  = (props) => {
       },
       body: JSON.stringify({username, password})
     })
+    .then(handleErrors)
     .then(() => {
       setCredentials({username, password});
       props.setIsAuthenticated(true);
       history("/");
     })
-    .then(handleErrors)
     .catch(error => {console.log(error); setIsError(true);})
       
   }
@@ -43,15 +43,19 @@ const Register  = (props) => {
     <div className="logins">
     <div className="login">
       <h1>Register</h1>
-      {isError && <div>User Already Exists</div>}
+      <br />
+      {isError && <div><h1>User Already Exists</h1></div>}
       <form className="login-form">
         <div className="label-login">
-          <label>Username:</label>
+          <label><u>Username:</u></label>
           <input type="text" name="username" className="text-login" onChange={(e) => setUsername(e.target.value)}/>
         </div>
         <div className="label-login">
-          <label>Password:</label>
+          <label><u>Password:</u></label>
           <input type="password" name="password" className="text-login" onChange={(e) => setPassword(e.target.value)}/>
+        </div>
+        <div className="login-old">
+        <Link to="/login">Already Registered? Login Here</Link>
         </div>
         <div>
         <button type="Submit" className="login-button" onClick={register}>REGISTER</button>

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {CredentialsContext} from "../App";
 import { useContext } from "react";
 
@@ -44,7 +44,8 @@ const Login  = (props) => {
     <div className="logins">
     <div className="login">
       <h1>Login</h1>
-      {isError && <div>User Already Exists</div>}
+      <br />
+      {isError && <div><h1>Invalid Username or Password</h1></div>}
       <form className="login-form">
         <div className="label-login">
           <label><u>Username:</u></label>
@@ -53,6 +54,9 @@ const Login  = (props) => {
         <div className="label-login">
           <label><u>Password:</u></label>
           <input type="password" name="password" className="text-login" onChange={(e) => setPassword(e.target.value)}/>
+        </div>
+        <div className="new-user">
+        <Link to="/register">New User? Register Here</Link>
         </div>
         <div>
         <button type="Submit" className="login-button" onClick={login}>LOGIN</button>

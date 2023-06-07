@@ -62,6 +62,9 @@ const Home = (props) => {
         .then(() => {
           fetchNotes(); // Fetch updated notes array
         })
+        .then(() => {
+          alert('Note updated successfully!');
+        })
         .catch((error) => {
           console.error('Error updating note:', error);
         });
