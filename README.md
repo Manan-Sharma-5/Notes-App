@@ -1,70 +1,30 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Take Note
 
-## Available Scripts
+In today's fast-paced world, it can be challenging to keep track of our daily tasks. That's why a reliable notes app is essential. I have developed a robust notes app using the MERN stack (MongoDB, Express.js, React.js, and Node.js).
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app boasts several key features that make note-taking a breeze. Users can effortlessly add, store, modify, and remove their notes from a user-friendly interface. To ensure data security and privacy, each user has their own dedicated storage for notes.
 
-### `npm test`
+Behind the scenes, the app leverages MongoDB, a powerful NoSQL database, to store both user details and notes. The backend server, built with Node.js, handles the requests through RESTful APIs, ensuring smooth communication between the client and server.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Client:** React, Vanilla CSS, Axios
 
-### `npm run eject`
+**Server:** Node, Express, MongoDB
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![App Screenshot](https://private-user-images.githubusercontent.com/112090668/243817750-243c26fe-6dbf-48a0-b5b7-ea506625d023.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJrZXkxIiwiZXhwIjoxNjg2MDgyNzczLCJuYmYiOjE2ODYwODI0NzMsInBhdGgiOiIvMTEyMDkwNjY4LzI0MzgxNzc1MC0yNDNjMjZmZS02ZGJmLTQ4YTAtYjViNy1lYTUwNjYyNWQwMjMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMDYwNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzA2MDZUMjAxNDMzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZTFjNGFlODc2ODg3YmI3NGMyNTI2MWZjOTBmNzQzMzVlNmFjYjFhZjQxNjE3ZTg2MmRiMWJkNjEzZWUxYjVlZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.toW48sccTPF6xbpM8Z4qWrvJRKHwICHbcsm_xyUPTI0)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![](https://private-user-images.githubusercontent.com/112090668/243817742-d60b9753-2335-47b9-8e91-6a0e30368fc9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJrZXkxIiwiZXhwIjoxNjg2MDgyNzczLCJuYmYiOjE2ODYwODI0NzMsInBhdGgiOiIvMTEyMDkwNjY4LzI0MzgxNzc0Mi1kNjBiOTc1My0yMzM1LTQ3YjktOGU5MS02YTBlMzAzNjhmYzkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMDYwNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzA2MDZUMjAxNDMzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjAzMWU0YzAzYmMwMDVmN2NlM2QxZTI0MTBlZWZjYTY5NzU4ZWZmNDI3Njg1MGRhYmZlMjE3MDQ4YTcyZDU4NyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.YT9gvmFWIowv8YzhPFdSbu84PZPO8cd0AKd_hmVMbRY)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![App Screenshot](https://private-user-images.githubusercontent.com/112090668/243817757-6d42eed9-e930-4340-870f-c5ecaf5d585c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJrZXkxIiwiZXhwIjoxNjg2MDgyNzczLCJuYmYiOjE2ODYwODI0NzMsInBhdGgiOiIvMTEyMDkwNjY4LzI0MzgxNzc1Ny02ZDQyZWVkOS1lOTMwLTQzNDAtODcwZi1jNWVjYWY1ZDU4NWMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMDYwNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzA2MDZUMjAxNDMzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjJmOWUxYjM5OTRhNTczZDJjY2FkNmVmMGU0OWQ4NTE1YzgwNGIwMzAzNzNiY2E2YWE3ODIwZTcwMWFiMDFkZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.7-T_35I3DbgSHbU7JijCz_vO3U7itshevL76zWwqF3o)
