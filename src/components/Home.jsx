@@ -42,7 +42,7 @@ const Home = (props) => {
         },
       })
         .then(() => {
-          fetchNotes(); // Fetch updated notes array
+          fetchNotes(); 
         })
         .catch((error) => {
           console.error('Error creating note:', error);
@@ -50,7 +50,7 @@ const Home = (props) => {
     }
 
     function updateNote (expandedID, title, content) {
-      const noteId = notes[expandedID]._id; // Use the MongoDB ID instead of array index
+      const noteId = notes[expandedID]._id; 
       axios.patch(`https://api-call-notes.onrender.com/notes/${noteId}`, {
         title,
         content,
@@ -60,7 +60,7 @@ const Home = (props) => {
         },
       })
         .then(() => {
-          fetchNotes(); // Fetch updated notes array
+          fetchNotes(); 
         })
         .then(() => {
           alert('Note updated successfully!');
@@ -71,10 +71,10 @@ const Home = (props) => {
       }
   
     function deleteNote(id) {
-      const noteId = notes[id]._id; // Use the MongoDB ID instead of array index
+      const noteId = notes[id]._id; 
       axios.delete(`https://api-call-notes.onrender.com/notes/${noteId}`)
         .then(() => {
-          fetchNotes(); // Fetch updated notes array
+          fetchNotes(); 
           setExpandedID(null);
         })
         .catch((error) => {
